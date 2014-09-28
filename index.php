@@ -29,7 +29,9 @@ ini_set('display_errors', 1);
                </select> Number of Words<br>
                <input type='submit' value='I want a different password!'><br>
           </form>
-
+          <pre>
+          <?php print_r($wordlist); ?>
+          </pre>
           <img src = "password_strength.png">
      </body>
 </html>
