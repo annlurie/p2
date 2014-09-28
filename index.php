@@ -12,6 +12,7 @@ ini_set('display_errors', 1);
           <?php require('logic.php'); ?>
      </head>
      <body> 
-          <h1><?php echo $test ?></h1>
+          <h1>Project 2: Password Generator, XKCD-Style</h1>
+          Password is <?php echo $password; ?>
      </body>
 </html>
