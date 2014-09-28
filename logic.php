@@ -1,5 +1,4 @@
 <?php
-//$test = "Checking all files talk to each other";
 
 // Setting up the contents of the array.
 // All items have value 'unpicked' - if an array item is selected
