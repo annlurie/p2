@@ -16,15 +16,18 @@ ini_set('display_errors', 1);
 
           <p>Password is <?php echo $password; ?></p>
 
-          <form method = 'POST' action = 'logic.php'>
-               <select name="wordCount">
-               <option value="volvo">1</option>
-               <option value="saab">2</option>
-               <option value="fiat">3</option>
-               <option value="audi">4</option>
-               </select><br>
+          <form method = 'POST' action = 'index.php'>
                <input type="checkbox" name="number" value="y">Append a number.<br>
                <input type="checkbox" name="specChar" value="y">Append a special character (@).<br>
+               <select name="wordCount">
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="7">8</option>
+               <option value="7">9</option>
+               </select> Number of Words<br>
+               <input type='submit' value='I want a different password!'><br>
           </form>
 
           <img src = "password_strength.png">
