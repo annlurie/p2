@@ -1,0 +1,1 @@
+Consulted: http://stackoverflow.com/questions/4366730/how-to-check-if-a-string-contains-specific-words

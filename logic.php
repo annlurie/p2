@@ -1,9 +1,5 @@
 <?php
 
-// Setting up the contents of the array.
-// All items have value 'unpicked' - if an array item is selected
-// its value will be changed to 'picked' 
-// and it will be ignored in future iterations of 'selectWord.'
 $wordlist = array 
 (
 	'monkey' => 'unpicked',
@@ -19,11 +15,33 @@ $wordlist = array
 
 // String for the final password
 $password = "";
-for ($i = 1; $i < 5; $i++)
+
+for ($i = 1; $i < 10; $i++)
 {
-	$password .=array_rand($wordlist,1)." ";
+	// Randomly pick a word from the array
+	$nextword = array_rand($wordlist,1);
+	// Check to see if the word has already been selected
+	// If so, decrement the for loop counter (ie try again)
+	if (strpos($password, $nextword) !== false)
+	{
+		$i--;
+	}
+	// Otherwise add the next word to $password
+	else
+	{
+		$password .= $nextword.' ';
+	}
 }
 
+if (4==4)
+{
+	$password .= "@";
+}
+	
+if (6==6)
+{
+	$password .= rand(0,9);
+}
 
 
 
