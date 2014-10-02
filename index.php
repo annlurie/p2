@@ -3,35 +3,101 @@ error_reporting(-1); # Report all PHP errors
 ini_set('display_errors', 1);
 ?>
 
-<!DOCTYPE html>
-<html>
-     <head>
-          <meta charset='utf-8'>
-          <title>Ann Lurie Project 2</title>
-          <link href="styles.css" rel="stylesheet" type="text/css">
-          <?php require('logic.php'); ?>
-     </head>
-     <body> 
-          <h1>Project 2: Password Generator, XKCD-Style</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title>Password(s) Generator, XKCD-Style</title>
+     <link rel="stylesheet" type="text/css" href="view.css" media="all">
+     <script type="text/javascript" src="view.js"></script>
+     <?php require('logic.php'); ?>
+</head>
 
-          <p>Password is <?php echo $password; ?></p>
+     <body>
+          <body id="main_body" >
+     
+     <img id="top" src="top.png" alt="">
+     <div id="form_container">
+     
+          <h1><a>Password(s) Generator, XKCD-Style</a></h1>
+          <form id="form_910559" class="appnitro"  method="post" action = "index.php">
+                         <div class="form_description">
+               <h2>Password(s) Generator, XKCD-Style</h2>
+               <p>This page will generate a single password comprised of multiple dictionary words plus some optional formatting choices for extra complexity. Here's one password to get you started: </p>
+               <h2><?php echo $password; ?></h2>
+          </div>                             
+               <ul >
+               
+                         <li id="li_1" >
+          <label class="description" for="count">Word Count (Max. 10) </label>
+          <div>
+          <select class="element select small" id="count" name="count"> 
+               <option value="1" >1</option>
+               <option value="2" >2</option>
+               <option value="3" >3</option>
+               <option value="4" selected="selected">4</option>
+               <option value="5" >5</option>
+               <option value="6" >6</option>
+               <option value="7" >7</option>
+               <option value="8" >8</option>
+               <option value="9" >9</option>
+               <option value="10" >10</option>
 
-          <form method = 'POST' action = 'index.php'>
-               <input type="checkbox" name="number" value="y">Append a number.<br>
-               <input type="checkbox" name="specChar" value="y">Append a special character (@).<br>
-               <select name="wordCount">
-               <option value="4">4</option>
-               <option value="5">5</option>
-               <option value="6">6</option>
-               <option value="7">7</option>
-               <option value="8">8</option>
-               <option value="9">9</option>
-               </select> Number of Words<br>
-               <input type='submit' value='I want a different password!'><br>
-          </form>
+          </select>
+          </div> 
+          </li>          <li id="li_2" >
+          <label class="description" for="element_2">Word Delimiter </label>
+          <div>
+          <select class="element select small" id="delimiter" name="delimiter"> 
+               <option value="-" selected="selected">Hyphen (-)</option>
+<option value="*" >Asterisk (*)</option>
+<option value=" " >Space ( )</option>
+
+          </select>
+          </div> 
+          </li>          <li id="li_3" >
+          <label class="description" for="element_3">Add a Special Character </label>
+          <div>
+          <select class="element select small" id="specialChar" name="specialChar"> 
+               <option value="!" selected="selected">!</option>
+               <option value="@" >@</option>
+               <option value="#" >#</option>
+               <option value="$" >$</option>
+               <option value="%" >%</option>
+               <option value="^" >^</option>
+               <option value="&" >&</option>
+               <option value="*" >*</option>
+               <option value="(" >(</option>
+               <option value=")" >)</option>
+
+          </select>
+          </div> 
+          </li>          <li id="li_4" >
+          <label class="description" for="element_4"> </label>
+          <span>
+               <input id="number" name="number" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="number">Add a Number (0-99)</label>
+
+          </span> 
+          </li>
+               
+                         <li class="buttons">
+                   <input type="hidden" name="form_id" value="910559" />
+                   
+                    <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+          </li>
+               </ul>
+          </form>   
+
           <pre>
-          <?php print_r($wordlist); ?>
+              <?php print_r($_POST); ?>
           </pre>
-          <img src = "password_strength.png">
+
+          <div id="footer">
+               Generated by <a href="http://www.phpform.org">pForm</a>
+          </div>
+     </div>
+     <img src = "password_strength.png">
+     <img id="bottom" src="bottom.png" alt="">
      </body>
 </html>
