@@ -1,1 +1,1 @@
-Consulted: http://stackoverflow.com/questions/4366730/how-to-check-if-a-string-contains-specific-words
+Consulted: http://www.w3schools.com/php/php_form_complete.asp (for retaining selected values when reloading form)
