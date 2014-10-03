@@ -22,7 +22,7 @@ ini_set('display_errors', 1);
           <form id="form_910559" class="appnitro"  method="post" action = "index.php">
                          <div class="form_description">
                <h2>Password(s) Generator, XKCD-Style</h2>
-               <p>This page will generate a single password comprised of multiple dictionary words plus some optional formatting choices for extra complexity. Here's one password to get you started: </p>
+               <p>This page will generate a single password comprised of multiple dictionary words (that all happen to be Kinds of Monkeys) plus some optional formatting choices for extra complexity. Here's one password to get you started: </p>
                <h2><?php echo $password; ?></h2>
           </div>                             
                <ul >

@@ -1,6 +1,7 @@
 <?php
 
 // VARIABLES!
+
 // Array containing the names of many kinds of monkeys
 // default is to consider all words unpicked,
 // as they are added to a password in progress, 
@@ -16,7 +17,15 @@ $wordlist = array
 'macaque' => 'unpicked',
 'squirrel' => 'unpicked',
 'tamarin' => 'unpicked',
-'colobus' => 'unpicked'
+'colobus' => 'unpicked',
+'talapoin' => 'unpicked',
+'guenon' => 'unpicked',
+'mangabey' => 'unpicked',
+'langur' => 'unpicked',
+'lutung' => 'unpicked',
+'marmoset' => 'unpicked',
+'titi' => 'unpicked',
+'saki' => 'unpicked'
 );
 
 // String for the final password
@@ -68,6 +77,7 @@ else
 }
 
 // FUNCTIONALITY!
+
 // Seed the password with first array item
 $firstword = array_rand($wordlist,1);
 $password .= $firstword;
