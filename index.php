@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
      <?php require('logic.php'); ?>
 </head>
 
-     <body id="main_body"/>
+     <body id="main_body">
      
      <img id="top" src="top.png" alt=""/>
      <div id="form_container">
