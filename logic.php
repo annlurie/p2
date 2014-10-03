@@ -22,11 +22,41 @@ $wordlist = array
 // String for the final password
 $password = '';
 
-// Vars for form elements
-$count = $_POST['count'];
-$delimiter = $_POST['delimiter'];
-$specialChar = $_POST['specialChar'];
-$number = $_POST['number'];
+// Initialize vars for form elements
+if (isset($_POST['count']))
+{
+	$count = $_POST['count'];
+}
+else
+{
+	$count = 4;
+}
+
+if (isset($_POST['delimiter']))
+{
+	$delimiter = $_POST['delimiter'];
+}
+else
+{
+	$delimiter = '-';
+}
+
+if (isset($_POST['specialChar']))
+{
+	$specialChar = $_POST['specialChar'];
+}
+else
+{
+	$specialChar = '';
+}
+if (isset($_POST['number']))
+{
+	$number = $_POST['number'];
+}
+else
+{
+	$number = 0;
+}
 
 // FUNCTIONS!
 // Seed the password with first array item

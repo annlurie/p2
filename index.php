@@ -49,17 +49,19 @@ ini_set('display_errors', 1);
           <label class="description" for="element_2">Word Delimiter </label>
           <div>
           <select class="element select small" id="delimiter" name="delimiter" value="<?php echo $delimiter;?>"> 
-               <option value="-" selected="selected">Hyphen (-)</option>
-<option value="*" >Asterisk (*)</option>
-<option value=" " >Space ( )</option>
+               <option value="-" >Hyphen (-)</option>
+               <option value="*" >Asterisk (*)</option>
+               <option value=" " >Space ( )</option>
+               <option value="" selected="selected">None</option>
 
           </select>
           </div> 
           </li>          <li id="li_3" >
           <label class="description" for="element_3">Add a Special Character </label>
           <div>
-          <select class="element select small" id="specialChar" name="specialChar" value="<?php echo $specialChar;?>"> 
-               <option value="!" selected="selected">!</option>
+          <select class="element select small" id="specialChar" name="specialChar" value="<?php echo $specialChar;?>">
+               <option value="" selected="selected">None</option> 
+               <option value="!" >!</option>
                <option value="@" >@</option>
                <option value="#" >#</option>
                <option value="$" >$</option>
