@@ -13,8 +13,7 @@ ini_set('display_errors', 1);
      <?php require('logic.php'); ?>
 </head>
 
-     <body>
-          <body id="main_body"/>
+     <body id="main_body"/>
      
      <img id="top" src="top.png" alt=""/>
      <div id="form_container">
@@ -44,7 +43,7 @@ ini_set('display_errors', 1);
                <option value="10" >10</option>
           </select>
           </div> 
-          
+
           </li>          <li id="li_2" >
           <label class="description" for="delimiter">Word Delimiter </label>
           <div>
